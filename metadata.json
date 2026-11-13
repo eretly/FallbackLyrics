@@ -1,0 +1,56 @@
+{
+    "id": "e4f8b912-881c-4b53-9021-998cb4b0a112",
+    "name": "FallbackLyrics",
+    "description": "Запасной текст песни для Яндекс Музыки.\n\nЕсли у трека нет родного текста, кнопка текста остаётся активной и открывает текст из Genius, LRCLIB, txtsong или lyrics.ovh. Если родной текст есть - зажми кнопку текста примерно на секунду (можно настроить), чтобы открыть альтернативный текст; обычный клик открывает родной.\n\n• Источники переключаются кнопками в меню текста; выбранный вариант запоминается для каждого трека отдельно.\n• Правки текста источника сохраняются как результат этого источника; кнопка обновления делает новый запрос.\n• Свой текст хранится отдельно - вкладка «свой текст» и карандаш. Тем же карандашом можно править тексты из разных источников.\n• Пустой результат не кэшируется: если ничего не нашлось, при следующем открытии поиск повторится.",
+    "version": "1.0.0",
+    "author": "eretly",
+    "type": "script",
+    "css": "style.css",
+    "script": "script.js",
+    "tags": [
+        "script",
+        "lyrics",
+        "fallback",
+        "yandex-music",
+        "genius",
+        "lrclib",
+        "txtsong",
+        "lyrics.ovh"
+    ],
+    "dependencies": [],
+    "conflictsWith": [],
+    "allowedUrls": [
+        "https://lrclib.net/",
+        "https://api.lyrics.ovh/",
+        "https://genius.com/",
+        "https://api.genius.com/",
+        "https://txtsong-ru.translate.goog/"
+    ],
+    "supportedVersions": [],
+    "fromPext": false,
+    "installSource": "local",
+    "image": "Assets/image-2.png",
+    "banner": "Assets/banner-2.png",
+    "preview": "Assets/preview-2.png",
+    "libraryLogo": "Assets/logo.png",
+    "settings": {
+        "sections": [
+            {
+                "title": "Поведение",
+                "items": [
+                    {
+                        "id": "longPressMs",
+                        "name": "Длительность удержания",
+                        "description": "Сколько миллисекунд удерживать кнопку текста, чтобы открыть альтернативный текст.",
+                        "value": 800,
+                        "defaultValue": 800,
+                        "type": "slider",
+                        "min": 300,
+                        "max": 2000,
+                        "step": 100
+                    }
+                ]
+            }
+        ]
+    }
+}

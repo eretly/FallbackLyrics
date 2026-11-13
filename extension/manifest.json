@@ -1,0 +1,46 @@
+{
+    "manifest_version": 3,
+    "name": "FallbackLyrics for Yandex Music",
+    "version": "1.0.0",
+    "description": "Запасной текст песни для Яндекс Музыки в браузере: LRCLIB, Genius, lyrics.ovh, txtsong.",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "host_permissions": [
+        "https://music.yandex.ru/*",
+        "https://music.yandex.com/*",
+        "https://music.yandex.by/*",
+        "https://music.yandex.kz/*",
+        "https://music.yandex.uz/*",
+        "https://lrclib.net/*",
+        "https://api.lyrics.ovh/*",
+        "https://genius.com/*",
+        "https://api.genius.com/*",
+        "https://txtsong.ru/*",
+        "https://*.translate.goog/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://music.yandex.ru/*",
+                "https://music.yandex.com/*",
+                "https://music.yandex.by/*",
+                "https://music.yandex.kz/*",
+                "https://music.yandex.uz/*"
+            ],
+            "js": [
+                "bridge.js",
+                "content.js"
+            ],
+            "css": [
+                "style.css"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}

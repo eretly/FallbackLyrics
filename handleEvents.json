@@ -1,0 +1,20 @@
+{
+    "sections": [
+        {
+            "title": "Настройки",
+            "items": [
+                {
+                    "id": "longPressMs",
+                    "name": "Долгое нажатие (мс)",
+                    "description": "Сколько держать родную кнопку текста, чтобы открыть наш текст",
+                    "type": "slider",
+                    "min": 300,
+                    "max": 1500,
+                    "step": 100,
+                    "value": 800,
+                    "defaultParameter": 800
+                }
+            ]
+        }
+    ]
+}
